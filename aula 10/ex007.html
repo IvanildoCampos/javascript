@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>somando numeros</title>
+    <style>
+        body{
+            font: normal 18pt arial;
+        }
+        input{
+            font: normal 18pt arial;
+            width: 100px;
+        }
+        div#res{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>somado valores</h1>
+    <input type="number" name="textn1" id="textn1">
+    <input type="number" name="textn2" id="textn2">
+    <input type="button" value="somar" onclick="somar()">
+    <div id="res">resultado</div>
+    
+    <script>
+        function somar() {
+            var n1 = window.document.getElementById('textn1')
+            var n2 = window.document.getElementById('textn2')
+            var tn1 = Number(n1.value)
+            var tn2 = Number(n2.value)
+            var s = tn1 + tn2
+            res.innerHTML = `A soma entre ${tn1} e ${tn2} é igual a <strong>${s}</strong>`;
+        }
+    </script>
+</body>
+</html>
